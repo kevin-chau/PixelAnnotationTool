@@ -115,7 +115,7 @@ Name2Labels defaultLabels() {
 	labels["landing site"               ] = LabelInfo("landing site"               , "construction"        ,  25, 6, QColor(255,  0,  0));
 	labels["car"                 ] = LabelInfo("car"                 , "vehicle"      ,  26, 7, QColor(  0,  0,142));
 	labels["truck"               ] = LabelInfo("truck"               , "vehicle"      ,  27, 7, QColor(  0,  0, 70));
-	labels["collection container"                 ] = LabelInfo("container"                 , "construction"      ,  28, 7, QColor(  0, 60,100));
+	labels["collection container"                 ] = LabelInfo("collection container"                 , "construction"      ,  28, 7, QColor(  0, 60,100));
 	labels["wheelbarrow"             ] = LabelInfo("wheelbarrow"             , "object"      ,  29, 7, QColor(  0,  0, 90));
 	labels["trailer"             ] = LabelInfo("trailer"             , "vehicle"      ,  30, 7, QColor(  0,  0,110));
 	//labels["train"               ] = LabelInfo("train"               , "vehicle"      ,  31, 7, QColor(  0, 80,100));
