@@ -87,55 +87,22 @@ Id2Labels getId2Label(const Name2Labels& labels) {
 Name2Labels defaultLabels() {
 	Name2Labels labels;
 	// inspired by https://raw.githubusercontent.com/mcordts/cityscapesScripts/master/cityscapesscripts/helpers/labels.py
-	labels["unlabeled"           ] = LabelInfo("unlabeled"           , "void"         ,  00, 0, QColor(  0,  0,  0));
-	//labels["ego vehicle"         ] = LabelInfo("ego vehicle"         , "void"         ,  01, 0, QColor(  0,  0,  0));
-	//labels["rectification border"] = LabelInfo("rectification border", "void"         ,  02, 0, QColor(  0,  0,  0));
-	//labels["out of roi"          ] = LabelInfo("out of roi"          , "void"         ,  03, 0, QColor(  0,  0,  0));
-	//labels["static"              ] = LabelInfo("static"              , "void"         ,  04, 0, QColor( 10,  0,  0));
-	labels["branch"             ] = LabelInfo("branch"             , "object"         ,  05, 0, QColor(111, 74,  0));
-	labels["ground"              ] = LabelInfo("ground"              , "flat"         ,  06, 0, QColor( 81,  0, 81));
-	labels["road"                ] = LabelInfo("road"                , "flat"         ,  07, 1, QColor(128, 64,128));
-	labels["sidewalk"            ] = LabelInfo("sidewalk"            , "flat"         ,   8, 1, QColor(244, 35,232));
-	labels["trail"             ] = LabelInfo("trail"             , "flat"         ,   9, 1, QColor(250,170,160));
-	//labels["rail track"          ] = LabelInfo("rail track"          , "flat"         ,  10, 1, QColor(230,150,140));
-	labels["building"            ] = LabelInfo("building"            , "construction" ,  11, 2, QColor( 70, 70, 70));
-	//labels["wall"                ] = LabelInfo("wall"                , "construction" ,  12, 2, QColor(102,102,156));
-	//labels["fence"               ] = LabelInfo("fence"               , "construction" ,  13, 2, QColor(190,153,153));
-	//labels["guard rail"          ] = LabelInfo("guard rail"          , "construction" ,  14, 2, QColor(180,165,180));
-	//labels["bridge"              ] = LabelInfo("bridge"              , "construction" ,  15, 2, QColor(150,100,100));
-	labels["slash"              ] = LabelInfo("slash"              , "object" ,  16, 2, QColor(150,120, 90));
-	labels["rock"                ] = LabelInfo("rock"                , "object"       ,  17, 3, QColor(153,153,153));
-	labels["debris"           ] = LabelInfo("debris"           , "object"       ,  18, 3, QColor(153,153,153));
-	labels["tree"       ] = LabelInfo("tree"       , "object"       ,  19, 3, QColor(250,170, 30));
-	labels["sign"        ] = LabelInfo("sign"        , "object"       ,  20, 3, QColor(220,220,  0));
-	labels["vegetation"          ] = LabelInfo("vegetation"          , "nature"       ,  21, 4, QColor(107,142, 35));
-	labels["terrain"             ] = LabelInfo("terrain"             , "nature"       ,  22, 4, QColor(152,251,152));
-	labels["sky"                 ] = LabelInfo("sky"                 , "sky"          ,  23, 5, QColor( 70,130,180));
-	labels["person"              ] = LabelInfo("person"              , "human"        ,  24, 6, QColor(220, 20, 60));
-	labels["landing site"               ] = LabelInfo("landing site"               , "construction"        ,  25, 6, QColor(255,  0,  0));
-	labels["car"                 ] = LabelInfo("car"                 , "vehicle"      ,  26, 7, QColor(  0,  0,142));
-	labels["truck"               ] = LabelInfo("truck"               , "vehicle"      ,  27, 7, QColor(  0,  0, 70));
-	labels["collection container"                 ] = LabelInfo("collection container"                 , "construction"      ,  28, 7, QColor(  0, 60,100));
-	labels["wheelbarrow"             ] = LabelInfo("wheelbarrow"             , "object"      ,  29, 7, QColor(  0,  0, 90));
-	labels["trailer"             ] = LabelInfo("trailer"             , "vehicle"      ,  30, 7, QColor(  0,  0,110));
-	//labels["train"               ] = LabelInfo("train"               , "vehicle"      ,  31, 7, QColor(  0, 80,100));
-	labels["water"          ] = LabelInfo("water"          , "vehicle"      ,  32, 7, QColor(  0,  0,230));
-	labels["stump"             ] = LabelInfo("stump"             , "object"      ,  33, 7, QColor(119, 11, 32));
-
-	// labels["road marking"        ] = LabelInfo("road marking"        , "flat"         ,  34, 1, QColor(250,250,250));
-	labels["other"               ] = LabelInfo("other"               , "void"         ,  35, 0, QColor(128,128,128));
-	//labels["license plate"       ] = LabelInfo("license plate"       , "vehicle"      ,  -1, 7, QColor(  0,  0,142));
-
-	//QVector<QColor> cmap = colorMap(labels.size());
-	//qDebug() << "cmlap size = " << cmap.size();
-	//QMapIterator<QString, LabelInfo> it(labels);
-	//int i = 0;
-	//while (it.hasNext()) {
-	//	it.next();
-	//	labels[it.key()].color = cmap[i++];
-	//}
-	//labels["unlabeled"].color = QColor(0, 0, 0);
-
+	labels["other"               ] = LabelInfo("other"               , "void"         ,  00, 0, QColor(  0,  0,  0));
+	labels["building"            ] = LabelInfo("building"            , "construction" ,  01, 2, QColor( 70, 70, 70));
+	labels["collection container"] = LabelInfo("collection container", "construction" ,  02, 2, QColor(  0, 60,100));
+	labels["debris"              ] = LabelInfo("debris"              , "object"       ,  03, 3, QColor(153,153,153));
+	labels["landing site"        ] = LabelInfo("landing site"        , "construction" ,  04, 2, QColor(255,  0,  0));
+	labels["path"                ] = LabelInfo("path"                , "flat"         ,  05, 1, QColor(250,170, 30));
+	labels["person"              ] = LabelInfo("person"              , "human"        ,  06, 6, QColor(220, 20, 60));
+	labels["rock"                ] = LabelInfo("rock"                , "object"       ,  07, 3, QColor(153,153,153));
+	labels["sign"                ] = LabelInfo("sign"                , "object"       ,   8, 3, QColor(220,220,  0));
+	labels["sky"                 ] = LabelInfo("sky"                 , "sky"          ,   9, 5, QColor( 70,130,180));
+	labels["slash"               ] = LabelInfo("slash"               , "object"       ,  10, 0, QColor(111, 74,  0));
+	labels["terrain"             ] = LabelInfo("terrain"             , "nature"       ,  11, 4, QColor(152,251,152));
+	labels["trailer"             ] = LabelInfo("trailer"             , "vehicle"      ,  12, 7, QColor(  0,  0,110));
+	labels["tree"                ] = LabelInfo("tree"                , "object"       ,  13, 3, QColor(119, 11, 32));
+	labels["vegetation"          ] = LabelInfo("vegetation"          , "nature"       ,  14, 4, QColor(107,142, 35));
+	labels["vehicle"             ] = LabelInfo("vehicle"             , "vehicle"      ,  15, 7, QColor(  0,  0, 70));
+	labels["water"               ] = LabelInfo("water"               , "nature"       ,  16, 4, QColor(  0,  0,230));
 	return labels;
-
 }
